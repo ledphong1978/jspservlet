@@ -1,0 +1,26 @@
+dbstom
+=========================================
+CREATE SCHEMA postgres
+  AUTHORIZATION postgres;
+
+GRANT ALL ON SCHEMA postgres TO postgres;
+=========================================
+CREATE TABLE tblstom
+(
+  codepk integer NOT NULL,
+  codeid character varying(7),
+  fullname character varying(120),
+  idcard character varying(20),
+  birthday character varying(20),
+  banid character varying(20),
+  moo character varying(2),
+  tambon character varying(30),
+  amphuer character varying(30),
+  province character varying(30),
+  CONSTRAINT tblstom_pkey PRIMARY KEY (codepk)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE tblstom
+  OWNER TO postgres;
